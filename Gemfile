@@ -10,8 +10,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 gem "sprockets-rails"
 
 # Use mysql as the database for Active Record
-gem "pg", "~> 1.1"
-#gem "mysql2", "~> 0.5"
+
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -57,7 +56,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  gem "mysql2", "~> 0.5"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -72,6 +71,6 @@ group :test do
   gem "webdrivers"
 end
 
-#group :production do
-#  gem 'pg', '1.1'
-#end
+group :production do
+  gem 'pg', '1.1.4'
+end
